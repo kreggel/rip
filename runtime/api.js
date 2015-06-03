@@ -1,4 +1,4 @@
-var rip = require('rip');
+var rip = require('kreggel-rip');
 module.exports = API;
 
 function API (name, version) {

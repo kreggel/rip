@@ -1,5 +1,5 @@
 console.log ('initializing production runtime')
-var app = require ('rip').app;
+var app = require ('kreggel-rip').app;
 var logger = require ('morgan');
 var bodyParser = require ('body-parser');
 
