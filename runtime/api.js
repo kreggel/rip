@@ -1,7 +1,7 @@
 var rip = require('rip');
 module.exports = API;
 
-function API (name, version, app) {
+function API (name, version) {
   this._routes = [];
   this.name = name;
   this.app = rip.app;
