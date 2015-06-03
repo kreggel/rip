@@ -7,16 +7,6 @@ var cors = require('cors');
 var compression = require('compression');
 var methodOverride = require('method-override');
 
-app.use(cors()); //enable cors for the whole service
-app.use(compression());
-app.use(methodOverride('X-HTTP-Method-Override'));
-
-if (app.get('env') === 'development') {
-  require('./runtime/development-runtime');
-} else {
-  require('./runtime/production-runtime');
-}
-
 module.exports = {
   app: app,
   api: function(name, version) {
@@ -34,3 +24,13 @@ module.exports = {
     });
   }
 };
+
+app.use(cors()); //enable cors for the whole service
+app.use(compression());
+app.use(methodOverride('X-HTTP-Method-Override'));
+
+if (app.get('env') === 'development') {
+  require('./runtime/development-runtime');
+} else {
+  require('./runtime/production-runtime');
+}
