@@ -2,7 +2,7 @@ console.log ('initializing app');
 
 var express = require ('express');
 var app = express ();
-var API = require ('runtime/api');
+var API = require ('./runtime/api');
 var cors = require('cors');
 var compression = require('compression');
 var methodOverride = require('method-override');
@@ -12,9 +12,9 @@ app.use(compression());
 app.use(methodOverride('X-HTTP-Method-Override'));
 
 if (app.get('env') === 'development') {
-  require('runtime/development-runtime');
+  require('./runtime/development-runtime');
 } else {
-  require('runtime/production-runtime');
+  require('./runtime/production-runtime');
 }
 
 module.exports = {
