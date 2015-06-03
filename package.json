@@ -1,6 +1,6 @@
 {
   "name": "kreggel-rip",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "REST in peace",
   "main": "rip.js",
   "scripts": {
