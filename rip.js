@@ -11,6 +11,12 @@ app.use(cors()); //enable cors for the whole service
 app.use(compression());
 app.use(methodOverride('X-HTTP-Method-Override'));
 
+if (app.get('env') === 'development') {
+  require('runtime/development-runtime');
+} else {
+  require('runtime/production-runtime');
+}
+
 module.exports = {
   app: app,
   api: function(name, version) {
