@@ -5,7 +5,7 @@ REST in peace (our basics for building our REST APIs)
 
 ## Installation
 
-  npm install git+https://git@giom/kreggel/rip.git --save
+  npm install kreggel-rip --save
 
 ## Usage
 
